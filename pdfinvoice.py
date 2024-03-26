@@ -5,14 +5,15 @@ from reportlab.lib.styles import getSampleStyleSheet
 import json
 import datetime
 
-# Read bill amounts from JSON file
-with open('bills.json', 'r') as file:
-    bills = json.load(file)
-
-water_bill = bills['water_bill']
-gas_bill = bills['gas_bill']
 
 def create_invoice():
+    # Read bill amounts from JSON file
+    with open('bills.json', 'r') as file:
+        bills = json.load(file)
+    
+    water_bill = bills['water_bill']  
+    gas_bill = bills['gas_bill']  
+
     doc = SimpleDocTemplate("invoice.pdf", pagesize=letter)
     story = []
     width, height = letter
