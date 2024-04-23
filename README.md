@@ -28,27 +28,19 @@ Execute your script to process and send the invoices.
 python3 run_invoice_process.py
 ```
 
-**5. Log Activities (Optional but Recommended)**
-Consider adding a logging function to your script to keep a record of each execution. This will help you track when invoices are sent and whether the process was successful.
-
-```python
-with open("invoice_log.txt", "a") as file:
-    file.write(f"Invoices sent on {datetime.now()}: Success\n")
-```
-
-**6. Check Sent Emails**
+**5. Check Sent Emails**
 Verify the emails in your sent folder to ensure no tenant is emailed multiple times. This step is crucial to maintaining good relations and ensuring communication clarity.
 
-**7. Deactivate the Virtual Environment**
+**6. Deactivate the Virtual Environment**
 Once your tasks are complete, deactivate the virtual environment to revert to your system’s default settings.
 
 ```bash
 deactivate
 ```
 
-**8. Periodic Review**
+**7. Periodic Review**
 Schedule a monthly reminder to review this playbook and update it if there are changes in the process or environment paths.
 
-**9. Backup Your Work**
+**8. Backup Your Work**
 Regularly backup your script and related files to prevent data loss and ensure continuity of operations.
 
